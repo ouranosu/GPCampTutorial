@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Questionnaire View Controller-->
+        <scene sceneID="EKK-07-8WZ">
+            <objects>
+                <viewController storyboardIdentifier="Questionnaire" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qqa-ki-YbS" customClass="QuestionnaireViewController" customModule="GPCampTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AnS-LY-h3I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuD-nZ-Qje">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem image="arrowshape.turn.up.left" catalog="system" id="Fsd-fU-ejL">
+                                        <connections>
+                                            <action selector="back:" destination="qqa-ki-YbS" id="WPU-EY-Rjg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Myb-6T-q7C"/>
+                                    <barButtonItem image="arrowshape.turn.up.right" catalog="system" id="rgf-uP-6Ba">
+                                        <connections>
+                                            <action selector="next:" destination="qqa-ki-YbS" id="nLf-9h-EXB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8Jm-bR-aY6"/>
+                                    <barButtonItem image="arrow.clockwise" catalog="system" id="cda-UT-p3l">
+                                        <connections>
+                                            <action selector="reload:" destination="qqa-ki-YbS" id="ZKX-Zo-6Xm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9h-Dp-XFF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsz-W8-YYj" customClass="AnimatableActivityIndicatorView" customModule="IBAnimatable">
+                                <rect key="frame" x="135" y="364" width="145" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_animationType" value="BallRotateChase"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PuD-nZ-Qje" firstAttribute="trailing" secondItem="0ez-Bi-eYC" secondAttribute="trailing" id="44S-IX-j6V"/>
+                            <constraint firstItem="m9h-Dp-XFF" firstAttribute="leading" secondItem="0ez-Bi-eYC" secondAttribute="leading" id="4ZN-Y6-EOj"/>
+                            <constraint firstItem="m9h-Dp-XFF" firstAttribute="top" secondItem="0ez-Bi-eYC" secondAttribute="top" id="7sx-mK-ozP"/>
+                            <constraint firstItem="PuD-nZ-Qje" firstAttribute="top" secondItem="m9h-Dp-XFF" secondAttribute="bottom" id="GLy-S1-Pyo"/>
+                            <constraint firstItem="gsz-W8-YYj" firstAttribute="leading" secondItem="0ez-Bi-eYC" secondAttribute="leading" constant="135" id="U6S-Ag-Kp1"/>
+                            <constraint firstItem="0ez-Bi-eYC" firstAttribute="trailing" secondItem="m9h-Dp-XFF" secondAttribute="trailing" id="WVf-Sl-5bu"/>
+                            <constraint firstItem="gsz-W8-YYj" firstAttribute="top" secondItem="0ez-Bi-eYC" secondAttribute="top" constant="320" id="aG7-5h-DeR"/>
+                            <constraint firstItem="PuD-nZ-Qje" firstAttribute="leading" secondItem="0ez-Bi-eYC" secondAttribute="leading" id="eJs-eU-RcG"/>
+                            <constraint firstItem="PuD-nZ-Qje" firstAttribute="top" secondItem="gsz-W8-YYj" secondAttribute="bottom" constant="321" id="nag-IH-xah"/>
+                            <constraint firstItem="0ez-Bi-eYC" firstAttribute="trailing" secondItem="gsz-W8-YYj" secondAttribute="trailing" constant="134" id="pap-sO-sdq"/>
+                            <constraint firstItem="PuD-nZ-Qje" firstAttribute="bottom" secondItem="0ez-Bi-eYC" secondAttribute="bottom" id="trp-Ia-KEb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0ez-Bi-eYC"/>
+                    </view>
+                    <connections>
+                        <outlet property="Indicator" destination="gsz-W8-YYj" id="6V3-Bg-YpB"/>
+                        <outlet property="webView" destination="m9h-Dp-XFF" id="Nzj-xE-NZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9x-tr-pzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="-254.46428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
+        <image name="arrowshape.turn.up.right" catalog="system" width="64" height="52"/>
+    </resources>
+</document>

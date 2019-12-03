@@ -1,0 +1,28 @@
+PODS:
+  - IBAnimatable (6.0.0)
+  - LTMorphingLabel (0.7.0)
+  - paper-onboarding (6.1.4)
+  - SideMenu (6.4.6)
+
+DEPENDENCIES:
+  - IBAnimatable
+  - LTMorphingLabel
+  - paper-onboarding
+  - SideMenu
+
+SPEC REPOS:
+  trunk:
+    - IBAnimatable
+    - LTMorphingLabel
+    - paper-onboarding
+    - SideMenu
+
+SPEC CHECKSUMS:
+  IBAnimatable: d49f9fee0c401b5b08d31b77256b77fb067e0e92
+  LTMorphingLabel: 22147fb1ec2b0306537ccc348b36ea8617179b03
+  paper-onboarding: d3f16416e6f42add686117e8b32bfffaad899a79
+  SideMenu: 43910eb6dc994dd59771f8e82573d04a9e776361
+
+PODFILE CHECKSUM: 9df959313a84d10a2caa3ccd24b5f79f46e2fb6a
+
+COCOAPODS: 1.8.0.beta.2
